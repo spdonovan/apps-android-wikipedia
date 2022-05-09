@@ -181,7 +181,6 @@ abstract class FeedCoordinatorBase(private val context: Context) {
 
     private fun setOfflineState() {
         removeProgressCard()
-        appendCard(OfflineCard())
     }
 
     private fun removeAccessibilityCard() {
