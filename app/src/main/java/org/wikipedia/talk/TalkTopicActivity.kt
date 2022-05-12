@@ -126,6 +126,10 @@ class TalkTopicActivity : BaseActivity(), LinkPreviewDialog.Callback, UserMentio
             replyClicked()
         }
 
+        binding.returnTopicButton.setOnClickListener {
+            onReturnPressed()
+        }
+
         textWatcher = binding.replySubjectText.doOnTextChanged { _, _, _, _ ->
             binding.replySubjectLayout.error = null
             binding.replyInputView.textInputLayout.error = null
@@ -212,6 +216,9 @@ class TalkTopicActivity : BaseActivity(), LinkPreviewDialog.Callback, UserMentio
             binding.replyInputView.editText.setSelection(binding.replyInputView.editText.text.toString().length)
         }
         invalidateOptionsMenu()
+    }
+
+    private fun onReturnPressed() {
     }
 
     public override fun onDestroy() {
