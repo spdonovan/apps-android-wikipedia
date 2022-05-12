@@ -219,6 +219,7 @@ class TalkTopicActivity : BaseActivity(), LinkPreviewDialog.Callback, UserMentio
     }
 
     private fun onReturnPressed() {
+        startActivity(PageActivity.newIntent(this))
     }
 
     public override fun onDestroy() {
